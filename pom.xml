@@ -15,7 +15,7 @@
 		<dependency>
 			<groupId>com.github.eagle6688</groupId>
 			<artifactId>devutility.internal</artifactId>
-			<version>1.1.17</version>
+			<version>1.1.16</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.eagle6688</groupId>
