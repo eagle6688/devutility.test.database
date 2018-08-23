@@ -10,6 +10,26 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<spring-version>5.0.8.RELEASE</spring-version>
 	</properties>
+	<dependencies>
+		<!-- devutility -->
+		<dependency>
+			<groupId>com.github.eagle6688</groupId>
+			<artifactId>devutility.internal</artifactId>
+			<version>1.1.17</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.eagle6688</groupId>
+			<artifactId>devutility.external.json</artifactId>
+			<version>2.9.5.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.eagle6688</groupId>
+			<artifactId>devutility.test.model</artifactId>
+			<version>0.0.1</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- devutility end -->
+	</dependencies>
 	<modules>
 		<module>devutility.test.database.spring-data</module>
 		<module>devutility.test.database.mybatis</module>

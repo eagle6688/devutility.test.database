@@ -7,6 +7,8 @@
 	</parent>
 	<artifactId>devutility.test.database.spring-data</artifactId>
 	<packaging>pom</packaging>
+	<dependencies>
+	</dependencies>
 	<modules>
 		<module>devutility.test.database.spring-data-jpa</module>
 		<module>devutility.test.database.spring-data-mongo</module>
