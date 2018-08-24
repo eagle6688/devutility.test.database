@@ -3,9 +3,6 @@ package devutility.test.database.springdatajpa.dao.mssql.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 @Entity
 public class Items extends BaseEntity {
 	@Id
