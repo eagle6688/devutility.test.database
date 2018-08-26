@@ -9,7 +9,7 @@
     http://www.springframework.org/schema/tx/spring-tx.xsd">
 	<description>Spring Configuration</description>
 	<tx:annotation-driven transaction-manager="transactionManager" />
-	<context:component-scan base-package="devutility.test.mybatis" />
+	<context:component-scan base-package="devutility.test.database" />
 
 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
@@ -41,6 +41,6 @@
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="annotationClass" value="org.springframework.stereotype.Repository" />
-		<property name="basePackage" value="devutility.test.mybatis.dao" />
+		<property name="basePackage" value="devutility.test.database.mybatis.dao" />
 	</bean>
 </beans>
