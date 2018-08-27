@@ -4,7 +4,6 @@ import java.util.HashMap;
 
 import javax.sql.DataSource;
 
-import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +15,8 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 
+import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
+
 @Configuration
 @PropertySource("classpath:db.properties")
 @EnableJpaRepositories(basePackages = "devutility.test.database.springdatajpa.dao.mssql", entityManagerFactoryRef = "entityManagerFactory1", transactionManagerRef = "transactionManager1")
@@ -23,14 +24,8 @@ public class DataSource1Configuration {
 	@Primary
 	@Bean
 	@ConfigurationProperties("db1.sqlserver")
-	public DataSourceProperties dataSourceProperties1() {
-		return new DataSourceProperties();
-	}
-
-	@Bean
-	@ConfigurationProperties("db1.sqlserver")
 	public DataSource dataSource1() {
-		return dataSourceProperties1().initializeDataSourceBuilder().build();
+		return DruidDataSourceBuilder.create().build();
 	}
 
 	@Bean
@@ -43,16 +38,16 @@ public class DataSource1Configuration {
 		return localContainerEntityManagerFactoryBean;
 	}
 
-	private HashMap<String, Object> jpaPropertyMap() {
-		HashMap<String, Object> map = new HashMap<>();
-		map.put("hibernate.dialect", "org.hibernate.dialect.SQLServerDialect");
-		return map;
-	}
-
 	@Bean
 	public PlatformTransactionManager transactionManager1() {
 		JpaTransactionManager transactionManager = new JpaTransactionManager();
 		transactionManager.setEntityManagerFactory(entityManagerFactory1().getObject());
 		return transactionManager;
+	}
+
+	private HashMap<String, Object> jpaPropertyMap() {
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("hibernate.dialect", "org.hibernate.dialect.SQLServerDialect");
+		return map;
 	}
 }
