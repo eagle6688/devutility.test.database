@@ -15,6 +15,14 @@ public class MySqlController {
 
 	@RequestMapping("/customer")
 	public Customer findCustomer(long id) {
-		return customerRepository.getOne(id);
+		Customer customer = customerRepository.getOne(id);
+
+		if (customer == null) {
+			System.out.println("No customer!");
+			return null;
+		}
+
+		System.out.println(customer.getName());
+		return customer;
 	}
 }
