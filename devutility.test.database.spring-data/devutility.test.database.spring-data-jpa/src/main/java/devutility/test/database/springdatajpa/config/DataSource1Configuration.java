@@ -28,6 +28,7 @@ public class DataSource1Configuration {
 		return DruidDataSourceBuilder.create().build();
 	}
 
+	@Primary
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory1() {
 		LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
