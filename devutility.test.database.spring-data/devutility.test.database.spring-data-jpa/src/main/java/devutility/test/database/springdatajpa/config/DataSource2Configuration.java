@@ -46,6 +46,9 @@ public class DataSource2Configuration {
 	private HashMap<String, Object> jpaPropertyMap() {
 		HashMap<String, Object> map = new HashMap<>();
 		map.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+		map.put("hibernate.show_sql", true);
+		map.put("hibernate.format_sql", true);
+		map.put("hibernate.enable_lazy_load_no_trans", true);
 		return map;
 	}
 }

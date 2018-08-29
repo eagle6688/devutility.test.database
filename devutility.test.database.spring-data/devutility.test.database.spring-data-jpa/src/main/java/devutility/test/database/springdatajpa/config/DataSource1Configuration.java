@@ -28,6 +28,16 @@ public class DataSource1Configuration {
 		return DruidDataSourceBuilder.create().build();
 	}
 
+	@Bean
+	@ConfigurationProperties("db1.sqlserver.jpa")
+	public HashMap<String, Object> jpaPropertyMap1() {
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("hibernate.dialect", "org.hibernate.dialect.SQLServerDialect");
+		map.put("hibernate.show_sql", true);
+		map.put("hibernate.format_sql", true);
+		return new HashMap<String, Object>();
+	}
+
 	@Primary
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory1() {
@@ -35,7 +45,7 @@ public class DataSource1Configuration {
 		localContainerEntityManagerFactoryBean.setDataSource(dataSource1());
 		localContainerEntityManagerFactoryBean.setPackagesToScan(new String[] { "devutility.test.database.springdatajpa.dao.mssql.entity" });
 		localContainerEntityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-		localContainerEntityManagerFactoryBean.setJpaPropertyMap(jpaPropertyMap());
+		localContainerEntityManagerFactoryBean.setJpaPropertyMap(jpaPropertyMap1());
 		return localContainerEntityManagerFactoryBean;
 	}
 
@@ -46,9 +56,4 @@ public class DataSource1Configuration {
 		return transactionManager;
 	}
 
-	private HashMap<String, Object> jpaPropertyMap() {
-		HashMap<String, Object> map = new HashMap<>();
-		map.put("hibernate.dialect", "org.hibernate.dialect.SQLServerDialect");
-		return map;
-	}
 }
