@@ -27,6 +27,13 @@
 			<version>8.0.12</version>
 		</dependency>
 		<!-- MySQL end -->
+		<!-- Connection Pool -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.10</version>
+		</dependency>
+		<!-- Connection Pool end -->
 	</dependencies>
 	<modules>
 		<module>devutility.test.database.mybatis-spring</module>
