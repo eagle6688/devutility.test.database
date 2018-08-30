@@ -32,5 +32,6 @@
 	</dependencies>
 	<modules>
 		<module>devutility.test.database.spring-data</module>
+		<module>devutility.test.database.mybatis</module>
 	</modules>
 </project>
