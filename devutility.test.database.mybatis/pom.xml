@@ -7,6 +7,27 @@
 	</parent>
 	<artifactId>devutility.test.database.mybatis</artifactId>
 	<packaging>pom</packaging>
+	<dependencies>
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+		<!-- Spring end -->
+		<!-- MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.12</version>
+		</dependency>
+		<!-- MySQL end -->
+	</dependencies>
 	<modules>
 		<module>devutility.test.database.mybatis-spring</module>
 		<module>devutility.test.database.mybatis-springboot</module>
