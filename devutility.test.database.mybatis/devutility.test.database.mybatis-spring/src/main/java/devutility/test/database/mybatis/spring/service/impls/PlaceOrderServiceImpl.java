@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import devutility.test.database.mybatis.spring.dao.entity.Order;
+import devutility.test.database.mybatis.spring.dao.entities.Order;
 import devutility.test.database.mybatis.spring.dao.interfaces.OrderDao;
 import devutility.test.database.mybatis.spring.dao.interfaces.ProductDao;
 import devutility.test.database.mybatis.spring.service.interfaces.PlaceOrderService;

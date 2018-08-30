@@ -2,8 +2,8 @@
 <!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<typeAlias alias="Product" type="devutility.test.database.mybatis.dao.entities.Product" />
-		<typeAlias alias="Order" type="devutility.test.database.mybatis.dao.entities.Order" />
+		<typeAlias alias="Product" type="devutility.test.database.mybatis.spring.dao.entities.Product" />
+		<typeAlias alias="Order" type="devutility.test.database.mybatis.spring.dao.entities.Order" />
 	</typeAliases>
 	<mappers>
 		<mapper resource="mapper/ProductMapper.xml" />

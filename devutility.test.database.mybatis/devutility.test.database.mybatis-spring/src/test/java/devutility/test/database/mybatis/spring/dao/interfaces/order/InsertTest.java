@@ -6,7 +6,7 @@ import java.util.Date;
 
 import devutility.internal.test.TestExecutor;
 import devutility.test.database.mybatis.spring.BaseTest;
-import devutility.test.database.mybatis.spring.dao.entity.Order;
+import devutility.test.database.mybatis.spring.dao.entities.Order;
 import devutility.test.database.mybatis.spring.dao.interfaces.OrderDao;
 
 public class InsertTest extends BaseTest {

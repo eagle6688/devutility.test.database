@@ -5,7 +5,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import devutility.external.json.JsonUtils;
 import devutility.internal.test.TestExecutor;
 import devutility.test.database.mybatis.spring.BaseTest;
-import devutility.test.database.mybatis.spring.dao.entity.Product;
+import devutility.test.database.mybatis.spring.dao.entities.Product;
 import devutility.test.database.mybatis.spring.dao.interfaces.ProductDao;
 
 public class GetTest extends BaseTest {

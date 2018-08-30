@@ -8,7 +8,7 @@ import devutility.external.json.JsonUtils;
 import devutility.internal.test.BaseTest;
 import devutility.internal.test.TestExecutor;
 import devutility.test.database.mybatis.spring.dao.MybatisFactory;
-import devutility.test.database.mybatis.spring.dao.entity.Product;
+import devutility.test.database.mybatis.spring.dao.entities.Product;
 import devutility.test.database.mybatis.spring.dao.mappers.ProductsMapper;
 
 public class SelectTest extends BaseTest {

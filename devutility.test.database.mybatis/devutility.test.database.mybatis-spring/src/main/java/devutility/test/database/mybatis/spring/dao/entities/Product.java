@@ -1,4 +1,4 @@
-package devutility.test.database.mybatis.spring.dao.entity;
+package devutility.test.database.mybatis.spring.dao.entities;
 
 import java.util.Date;
 

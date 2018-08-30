@@ -2,7 +2,7 @@ package devutility.test.database.mybatis.spring.dao.interfaces;
 
 import org.springframework.stereotype.Repository;
 
-import devutility.test.database.mybatis.spring.dao.entity.Order;
+import devutility.test.database.mybatis.spring.dao.entities.Order;
 
 @Repository
 public interface OrderDao {
