@@ -1,0 +1,28 @@
+server:
+  port: 9007
+  
+spring:
+  datasource:
+    name: devutility-test-database-mybatis-springboot
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: ${DB_URL:jdbc:mysql://127.0.0.1:3306/Test}?useUnicode=true&useSSL=false
+      username: ${DB_UID:tester}
+      password: ${DB_PWD:tester}
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: false
+      max-pool-prepared-statement-per-connection-size: 20
+      filters: stat
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: devutility.test.database.mybatis.springboot.entities

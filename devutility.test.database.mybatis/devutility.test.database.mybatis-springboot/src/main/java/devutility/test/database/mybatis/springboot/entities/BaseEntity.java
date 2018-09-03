@@ -1,4 +1,4 @@
-package devutility.test.database.mybatis.springboot.ds1.entities;
+package devutility.test.database.mybatis.springboot.entities;
 
 import java.util.Date;
 

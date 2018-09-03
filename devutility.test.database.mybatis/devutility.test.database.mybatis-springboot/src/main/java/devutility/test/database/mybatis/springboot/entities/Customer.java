@@ -1,11 +1,11 @@
-package devutility.test.database.mybatis.springboot.ds2.entities;
+package devutility.test.database.mybatis.springboot.entities;
 
 public class Customer extends BaseEntity {
 	private long id;
-	private String name;
-	private String address;
+	private String name1;
+	private String address1;
 	private String city;
-	private String state;
+	private int state;
 	private int zip;
 	private String phone;
 	private String email;
@@ -18,20 +18,20 @@ public class Customer extends BaseEntity {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getName1() {
+		return name1;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setName1(String name1) {
+		this.name1 = name1;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getAddress1() {
+		return address1;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setAddress1(String address1) {
+		this.address1 = address1;
 	}
 
 	public String getCity() {
@@ -42,11 +42,11 @@ public class Customer extends BaseEntity {
 		this.city = city;
 	}
 
-	public String getState() {
+	public int getState() {
 		return state;
 	}
 
-	public void setState(String state) {
+	public void setState(int state) {
 		this.state = state;
 	}
 
