@@ -4,6 +4,7 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
+import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -17,6 +18,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
+import com.github.pagehelper.PageInterceptor;
 
 @Configuration
 @PropertySource("classpath:db.properties")
@@ -35,6 +37,16 @@ public class DataSource1Configuration {
 	}
 
 	@Bean
+	public Interceptor pageHelperInterceptor1() {
+		Properties properties = new Properties();
+		properties.setProperty("helperDialect", "sqlserver2012");
+
+		Interceptor interceptor = new PageInterceptor();
+		interceptor.setProperties(properties);
+		return interceptor;
+	}
+
+	@Bean
 	public SqlSessionFactory sqlSessionFactory1(DataSource dataSource1, Properties ormProperties1) throws Exception {
 		String configLocation = ormProperties1.getProperty("mybatis.config-location");
 		Resource[] resources = new PathMatchingResourcePatternResolver().getResources(configLocation);
@@ -42,6 +54,7 @@ public class DataSource1Configuration {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
 		sqlSessionFactoryBean.setDataSource(dataSource1);
 		sqlSessionFactoryBean.setConfigLocation(resources[0]);
+		sqlSessionFactoryBean.setPlugins(new Interceptor[] { pageHelperInterceptor1() });
 		return sqlSessionFactoryBean.getObject();
 	}
 

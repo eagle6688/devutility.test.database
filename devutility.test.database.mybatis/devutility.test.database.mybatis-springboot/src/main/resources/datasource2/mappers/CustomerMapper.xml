@@ -6,6 +6,9 @@
 		<id column="Address1" property="address" />
 	</resultMap>
 	<select id="get" resultMap="CustomerMapping">
-		select * from customer where id = #{id};
+		select * from Customer where id = #{id};
+	</select>
+	<select id="list" resultMap="CustomerMapping">
+		select * from Customer where Name1 is not null order by Created desc
 	</select>
 </mapper>

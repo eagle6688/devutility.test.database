@@ -4,4 +4,7 @@
 	<select id="get" resultType="Items">
 		select * from Items with(nolock) where id = #{id}
 	</select>
+	<select id="list" resultType="Items">
+		select * from Items with(nolock) order by Created desc
+	</select>
 </mapper>

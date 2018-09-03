@@ -5,7 +5,7 @@ public class Customer extends BaseEntity {
 	private String name;
 	private String address;
 	private String city;
-	private int state;
+	private String state;
 	private int zip;
 	private String phone;
 	private String email;
@@ -42,11 +42,11 @@ public class Customer extends BaseEntity {
 		this.city = city;
 	}
 
-	public int getState() {
+	public String getState() {
 		return state;
 	}
 
-	public void setState(int state) {
+	public void setState(String state) {
 		this.state = state;
 	}
 

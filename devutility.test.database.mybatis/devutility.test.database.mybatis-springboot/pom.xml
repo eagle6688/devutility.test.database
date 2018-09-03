@@ -37,10 +37,14 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<!-- Spring Boot end -->
+
+		<!-- SQL Server -->
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
 		</dependency>
+		<!-- SQL Server end -->
+
 		<!-- MyBatis -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
@@ -48,5 +52,13 @@
 			<version>1.3.2</version>
 		</dependency>
 		<!-- MyBatis end -->
+
+		<!-- Page Helper -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>5.1.5</version>
+		</dependency>
+		<!-- Page Helper end -->
 	</dependencies>
 </project>
