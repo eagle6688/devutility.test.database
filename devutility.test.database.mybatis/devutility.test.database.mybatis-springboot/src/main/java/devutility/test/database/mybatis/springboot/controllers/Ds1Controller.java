@@ -8,13 +8,13 @@ import devutility.test.database.mybatis.springboot.ds1.entities.Items;
 import devutility.test.database.mybatis.springboot.ds1.mappers.ItemsMapper;
 
 @RestController
-@RequestMapping("/items")
-public class ItemsController {
+@RequestMapping("/ds1")
+public class Ds1Controller {
 	@Autowired
 	private ItemsMapper itemsMapper;
 
-	@RequestMapping("/get")
-	public Items get(String id) {
+	@RequestMapping("/item")
+	public Items item(String id) {
 		return itemsMapper.get(id);
 	}
 }

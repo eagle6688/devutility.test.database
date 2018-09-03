@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="devutility.test.database.mybatis.springboot.ds2.mappers.CustomerMapper">
+	<resultMap id="CustomerMapping" type="Customer">
+		<id column="Name1" property="name" />
+		<id column="Address1" property="address" />
+	</resultMap>
+	<select id="get" resultMap="CustomerMapping">
+		select * from customer where id = #{id};
+	</select>
+</mapper>
