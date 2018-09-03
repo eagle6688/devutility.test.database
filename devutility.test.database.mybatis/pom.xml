@@ -20,7 +20,7 @@
 			<version>${spring-version}</version>
 		</dependency>
 		<!-- Spring end -->
-		
+
 		<!-- MySQL -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -40,5 +40,6 @@
 		<module>devutility.test.database.mybatis-spring</module>
 		<module>devutility.test.database.mybatis-springboot</module>
 		<module>devutility.test.database.mybatis.single</module>
+		<module>devutility.test.database.mybatis-springboot-multi-source</module>
 	</modules>
 </project>
