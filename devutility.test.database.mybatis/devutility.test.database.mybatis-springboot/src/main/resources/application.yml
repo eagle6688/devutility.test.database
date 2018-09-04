@@ -6,7 +6,7 @@ spring:
     name: devutility-test-database-mybatis-springboot
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
-      driver-class-name: com.mysql.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
       url: ${DB_URL:jdbc:mysql://127.0.0.1:3306/Test}?useUnicode=true&useSSL=false
       username: ${DB_UID:tester}
       password: ${DB_PWD:tester}
