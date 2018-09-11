@@ -3,10 +3,8 @@ package devutility.test.database.springdatajpa.dao.mysql.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "customer")
 public class Customer extends BaseEntity {
 	@Id
 	private long id;
