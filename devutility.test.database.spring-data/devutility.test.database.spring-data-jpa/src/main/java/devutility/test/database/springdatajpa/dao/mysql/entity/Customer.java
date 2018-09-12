@@ -2,12 +2,15 @@ package devutility.test.database.springdatajpa.dao.mysql.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Customer extends BaseEntity {
 	@Id
-	private long id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private String id;
 
 	@Column(name = "Name1")
 	private String name;
@@ -16,16 +19,16 @@ public class Customer extends BaseEntity {
 	private String address;
 
 	private String city;
-	private int state;
-	private int zip;
+	private String state;
+	private String zip;
 	private String phone;
 	private String email;
 
-	public long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -53,19 +56,19 @@ public class Customer extends BaseEntity {
 		this.city = city;
 	}
 
-	public int getState() {
+	public String getState() {
 		return state;
 	}
 
-	public void setState(int state) {
+	public void setState(String state) {
 		this.state = state;
 	}
 
-	public int getZip() {
+	public String getZip() {
 		return zip;
 	}
 
-	public void setZip(int zip) {
+	public void setZip(String zip) {
 		this.zip = zip;
 	}
 
