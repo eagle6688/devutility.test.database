@@ -4,12 +4,12 @@ import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 
-import com.devutility.test.entity.mongo.User;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import devutility.internal.test.TestExecutor;
 import devutility.test.database.springdatamongo.BaseTest;
+import devutility.test.database.springdatamongo.model.User;
 
 public class FindOneTest extends BaseTest {
 	@Override
